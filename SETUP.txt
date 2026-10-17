@@ -1,0 +1,75 @@
+MyCloudPool: free public information pages
+
+The two website files are index.html (homepage) and privacy.html (privacy policy).
+They describe the personal rclone/RSAF setup discussed in this conversation.
+Review the text before publishing and keep it accurate if your setup changes.
+These files do not contain Google credentials or connect cloud accounts.
+
+1. Publish with free GitHub Pages
+
+Sign in at https://github.com/ (create a free account if necessary).
+Create a NEW public repository named mycloudpool and enable Add README.
+Do not overwrite an existing repository or personal homepage.
+In the repository, choose Add file -> Upload files.
+Upload index.html and privacy.html, then commit the changes.
+Do not upload Google credential JSON files or rclone.conf.
+
+Open repository Settings -> Pages.
+Under Build and deployment, choose Deploy from a branch.
+Choose the main branch, / (root), then Save.
+Wait for deployment; GitHub says publication can take up to 10 minutes.
+Copy the exact published URL displayed on this Pages screen.
+
+For a repository named mycloudpool, a typical URL looks like:
+https://YOUR-USERNAME.github.io/mycloudpool/
+YOUR-USERNAME is a placeholder for your actual GitHub username.
+
+Confirm that both the homepage and its Privacy policy link open publicly.
+
+2. Google site ownership verification, if requested
+
+Use the same Google account that owns your MyCloudPool Cloud project.
+Open https://search.google.com/search-console/welcome
+Add a URL-prefix property using the exact published HTTPS site URL.
+Choose HTML file verification.
+Download Google's verification HTML file without changing its name or contents.
+Upload that file to the same GitHub repository folder as index.html.
+Wait for the site to update, open the verification URL Google specifies, and
+then click Verify in Search Console. Keep the verification file online.
+This is site-ownership verification, separate from OAuth scope verification.
+
+3. Finish Google Auth Platform -> Branding
+
+Application home page:
+Paste the exact published homepage URL copied from GitHub Pages.
+
+Application privacy policy link:
+Use the same URL followed by privacy.html.
+
+Authorized domains:
+Use your actual hostname, such as YOUR-USERNAME.github.io,
+without https:// and without /mycloudpool/ or any other path.
+
+Confirm the app name, support email, and developer contact email are filled.
+Save Branding, return to Audience, and try Publish app.
+
+Important limitation:
+Google decides whether a hostname satisfies its OAuth domain requirements.
+The rclone guide recommends GitHub Pages, but Google Developer forum reports
+also describe domain-validation failures with some GitHub Pages sites.
+Hosting these pages is not a guarantee of OAuth publication or verification.
+If Google rejects the domain or keeps Publish app disabled, retain the exact
+error and diagnose that validation step before changing more settings.
+
+Temporary testing:
+Audience -> Test users -> Add users can authorize your own accounts while the
+project remains in Testing. Drive authorizations in that mode expire after
+seven days and must be renewed.
+
+Reference documentation
+https://rclone.org/drive/#making-your-own-client-id
+https://support.google.com/cloud/answer/15549049
+https://support.google.com/cloud/answer/15549945
+https://support.google.com/webmasters/answer/9008080
+https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site
+https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site
