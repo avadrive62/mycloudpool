@@ -1,0 +1,21 @@
+{
+    admin off
+    auto_https off
+    persist_config off
+}
+
+:{$PORT:8080} {
+    header Content-Type "text/plain; charset=utf-8"
+    @health path /healthz
+    respond @health "ok" 200
+    respond "CloudPool is waiting for configuration.
+
+Open this app's Environment tab in Blitz.cloud and set:
+
+CLOUDPOOL_USER
+CLOUDPOOL_PASSWORD  (at least 16 ASCII characters)
+CLOUDPOOL_CONFIG_B64  (the Base64 copy of your rclone.conf)
+
+Then restart this app. See the supplied CLOUDPOOL-SETUP.md for the exact steps.
+" 200
+}

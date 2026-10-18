@@ -1,0 +1,45 @@
+{
+    admin off
+    auto_https off
+    persist_config off
+}
+
+:{$PORT:8080} {
+    route {
+        @health path /healthz
+        respond @health "ok" 200
+
+        @foreignOrigin expression `{http.request.header.Origin} != "" && {http.request.header.Origin} != "https://" + {http.request.hostport} && {http.request.header.Origin} != "http://" + {http.request.hostport}`
+        respond @foreignOrigin "This request came from another website." 403
+
+        basic_auth {
+            {$CLOUDPOOL_USER} {$CLOUDPOOL_PASSWORD_HASH}
+        }
+
+        header {
+            Cache-Control "no-store"
+            Referrer-Policy "no-referrer"
+            X-Content-Type-Options "nosniff"
+            X-Frame-Options "DENY"
+        }
+
+        @download path_regexp served ^/_serve/([0-9]{2,5})(/.*)$
+        handle @download {
+            rewrite * {re.served.2}
+            reverse_proxy 127.0.0.1:{re.served.1}
+        }
+
+        @api method POST
+        reverse_proxy @api 127.0.0.1:{$CLOUDPOOL_RC_PORT:5533}
+
+        @entry {
+            path / /login
+            not query url=*
+        }
+        redir @entry /login?url={$CLOUDPOOL_SCHEME:https}://{hostport} 302
+
+        root * {$CLOUDPOOL_APP_DIR:/app}/gui
+        try_files {path} /index.html
+        file_server
+    }
+}

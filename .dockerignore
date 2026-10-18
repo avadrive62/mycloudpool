@@ -1,0 +1,6 @@
+*
+!Dockerfile
+!patch-gui.mjs
+!start.sh
+!Caddyfile
+!waiting.Caddyfile
