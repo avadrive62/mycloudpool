@@ -1,4 +1,3 @@
-# syntax=docker/dockerfile:1
 FROM node:24-alpine@sha256:44fce696f38ba8c987c4db89954051000bbd05ffd8d8659ba15ed4a8602e937f AS web
 WORKDIR /build
 ADD https://codeload.github.com/rclone/rclone-web/zip/refs/tags/1.1.11 /tmp/web.zip
