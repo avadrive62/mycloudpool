@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Privacy policy — MyCloudPool</title>
-  <meta name="description" content="Privacy practices for the owner's personal MyCloudPool file management setup.">
+  <title>Privacy policy — CloudPool</title>
+  <meta name="description" content="Privacy practices for CloudPool, the owner's personal rclone gateway hosted on Blitz.cloud with Google Drive storage.">
   <style>
     :root{color-scheme:light;--ink:#18342e;--muted:#52685f;--paper:#f5f6f0;--line:#d7dfd6;--accent:#215d47}
     *{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.7 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
@@ -19,31 +19,31 @@
   </style>
 </head>
 <body>
-  <header><a class="brand" href="./">MyCloudPool</a><a href="./">Home</a></header>
+  <header><a class="brand" href="./">CloudPool</a><a href="./">Home</a></header>
   <main>
     <p class="eyebrow">Personal-use project</p>
     <h1>Privacy policy</h1>
-    <p class="date">Effective date: 17 October 2026</p>
-    <p class="intro">This policy describes MyCloudPool, the owner's personal file management setup using rclone on Windows and RSAF on Android with Google Drive. The project is not offered as a public service.</p>
+    <p class="date">Effective date: 23 October 2026</p>
+    <p class="intro">This policy describes CloudPool, the owner's private file gateway using rclone hosted on Blitz.cloud with Google Drive. The owner accesses the gateway through a password-protected web interface on Windows or Android. It is a personal-use setup.</p>
     <h2>Information accessed</h2>
-    <p>The clients use Google authorization credentials, file and folder names, file metadata, storage usage information, and file contents when needed for the operations the owner requests. Access is limited to the Google accounts the owner authorizes.</p>
+    <p>The gateway processes Google authorization credentials, file and folder names, file metadata, storage usage information, and file contents when needed for the operations the owner requests. Access is limited to the Google accounts the owner authorizes. The gateway also processes the owner's sign-in credentials and ordinary connection information needed to provide authenticated access.</p>
     <h2>Purpose of access</h2>
-    <p>Google Drive data is used to list, open, upload, download, organize, rename, move and delete the owner's files, and to present selected storage folders together through an rclone Union configuration. The Google Drive scope permits file management across the authorized account; the local configuration determines the folders used.</p>
+    <p>Google Drive data is used to list, open, upload, download, organize, rename, move and delete the owner's files, and to present selected storage folders together through an rclone Union configuration. The Google Drive scope permits file management across the authorized account; the gateway configuration determines the folders used by the pool.</p>
     <h2>Where information is stored</h2>
-    <p>Cloud files are stored in the connected Google Drive accounts. Downloads, opened files, edits and temporary caches may be stored on the owner's devices. Authorization credentials are maintained in the clients' local configuration. RSAF manages its imported configuration within the Android app's storage.</p>
-    <p>MyCloudPool operates no separate server that receives Google Drive content or authorization credentials. This informational website does not connect to the Google Drive API.</p>
+    <p>Cloud files are stored in the connected Google Drive accounts. Uploads, downloads, file metadata and other requested file operations pass through the gateway hosted on Blitz.cloud. Transfers may create temporary buffers or caches on the gateway, and downloaded or opened files may be stored on the owner's devices.</p>
+    <p>The gateway's rclone configuration and Google authorization tokens are maintained in private application settings and persistent application storage on Blitz.cloud. The hosting provider processes the gateway's network traffic, application settings, stored configuration and operational logs to run the service. Local rclone or RSAF clients, when used, maintain their own configuration and caches on the owner's devices.</p>
     <h2>Sharing and advertising</h2>
-    <p>This personal setup does not sell Google user data or use it for advertising. Data is processed by Google as the storage provider and by the clients and applications the owner chooses to use with the files. Any sharing or transfer to another recipient is initiated by the owner.</p>
+    <p>This personal setup does not sell Google user data or use it for advertising. Google processes data as the authorization and storage provider. Blitz.cloud processes data as the gateway's hosting provider, and the owner's browser and any other chosen clients process files during use. Any additional sharing with another recipient is initiated by the owner.</p>
     <h2>Retention, deletion and revocation</h2>
-    <p>Files remain in their Google Drive accounts until the owner deletes them, subject to Google's storage and trash policies. Local copies and caches remain until removed by the client or owner. Removing a connection does not itself delete cloud files.</p>
-    <p>The owner can revoke authorization through <a href="https://myaccount.google.com/connections">Google Account connections</a>, then remove the corresponding local configuration and any unwanted local copies. Revoking authorization prevents future authorized access; it does not erase existing downloads.</p>
+    <p>Files remain in their Google Drive accounts until the owner deletes them, subject to Google's storage and trash policies. Stored authorization credentials remain until revoked or removed from the relevant configuration and application settings. Copies, caches and operational logs are retained according to the clients' and hosting provider's settings. Removing a connection does not itself delete cloud files.</p>
+    <p>The owner can revoke authorization through <a href="https://myaccount.google.com/connections">Google Account connections</a>, then remove the corresponding hosted and local configuration, imported credentials and any unwanted copies. Revoking authorization prevents future authorized access; it does not erase existing downloads.</p>
     <h2>Use of this website</h2>
-    <p>These information pages contain no sign-in form, file upload form, advertising or analytics scripts. The website hosting provider may process ordinary connection information, such as IP addresses and request logs, under its own privacy practices.</p>
+    <p>These public information pages are hosted on GitHub Pages and are separate from the gateway on Blitz.cloud. They contain no sign-in form, file upload form, advertising or analytics scripts, and do not connect to the Google Drive API. GitHub may process ordinary connection information, such as IP addresses and request logs, under its own privacy practices.</p>
     <h2>Google API data use</h2>
-    <p>MyCloudPool's use and transfer of information received from Google APIs will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including its Limited Use requirements.</p>
+    <p>CloudPool's use and transfer of information received from Google APIs will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including its Limited Use requirements.</p>
     <h2>Contact and updates</h2>
     <p>For questions, use the support email listed on this project's Google authorization screen. Changes to this policy will be reflected on this page with an updated effective date.</p>
   </main>
-  <footer>MyCloudPool · <a href="./">Return to homepage</a></footer>
+  <footer>CloudPool · <a href="./">Return to homepage</a></footer>
 </body>
 </html>

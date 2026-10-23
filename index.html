@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>MyCloudPool — Personal file management</title>
-  <meta name="description" content="Information about MyCloudPool, a private file management setup using rclone and RSAF to work with the owner's authorized Google Drive accounts.">
+  <title>CloudPool — Personal cloud file gateway</title>
+  <meta name="description" content="CloudPool is a private rclone gateway hosted on Blitz.cloud for managing the owner's authorized Google Drive accounts from a Windows or Android browser.">
   <style>
     :root{color-scheme:light;--ink:#18342e;--muted:#52685f;--paper:#f5f6f0;--line:#d7dfd6;--accent:#215d47}
     *{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
@@ -22,12 +22,12 @@
   </style>
 </head>
 <body>
-  <header><a class="brand" href="./">MyCloudPool</a><a href="privacy.html">Privacy policy</a></header>
+  <header><a class="brand" href="./">CloudPool</a><a href="privacy.html">Privacy policy</a></header>
   <main>
     <div class="intro">
       <p class="eyebrow">Personal file management</p>
       <h1>One place to work with my cloud files.</h1>
-      <p class="lead">MyCloudPool is the project name for a private setup that uses rclone on Windows and RSAF on Android to manage the owner's authorized Google Drive accounts.</p>
+      <p class="lead">CloudPool is a private file gateway that runs rclone on Blitz.cloud. The owner uses it to manage their authorized Google Drive accounts from a web browser on Windows or Android.</p>
       <p>It is for the owner's personal use. It is not offered as a public storage or account-registration service.</p>
     </div>
     <section>
@@ -41,16 +41,16 @@
     </section>
     <section>
       <h2>Access to Google Drive</h2>
-      <p>Google authorization is requested by the locally installed clients, using the owner's Google Cloud OAuth configuration. File-management access is used to perform the operations described above.</p>
-      <p>Connection credentials are kept by those clients on the owner's devices. Files remain in the connected Google Drive accounts, with local copies or caches when the owner opens, downloads or edits them.</p>
-      <div class="note">This website only explains the personal setup and its privacy practices. It contains no Google sign-in form and does not receive Google Drive files or account credentials.</div>
+      <p>The owner authorizes each Google account using their own Google Cloud OAuth configuration. The file-management scope allows the gateway to list, upload, download, organize and delete files at the owner's request. The configured pool presents selected folders together.</p>
+      <p>The gateway keeps its rclone configuration and Google authorization credentials in private application settings and persistent storage on Blitz.cloud. File contents and metadata pass through the gateway during requested operations. Files are stored in the connected Google Drive accounts; transfers may also create temporary buffers, caches or downloaded copies.</p>
+      <div class="note">These public information pages are hosted on GitHub Pages. They explain the separate, password-protected gateway and its privacy practices. The information pages contain no sign-in or upload form and do not receive Google Drive files or credentials.</div>
     </section>
     <section>
       <h2>Privacy and control</h2>
-      <p>Read the <a href="privacy.html">MyCloudPool privacy policy</a> for the data used by this setup, storage practices and how to revoke access.</p>
+      <p>Read the <a href="privacy.html">CloudPool privacy policy</a> for the data used by this setup, storage practices and how to revoke access.</p>
       <p>For questions, use the support email listed on this project's Google authorization screen.</p>
     </section>
   </main>
-  <footer><span>MyCloudPool · Personal-use project</span><span>Updated 17 October 2026</span></footer>
+  <footer><span>CloudPool · Personal-use project</span><span>Updated 23 October 2026</span></footer>
 </body>
 </html>
